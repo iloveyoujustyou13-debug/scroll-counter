@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# Create gradlew script to trigger build execution
+DIRNAME=`dirname "$0"`
+if [ -z "$DIRNAME" ]; then
+    DIRNAME="."
+fi
+exec "$DIRNAME/gradle/wrapper/gradle-wrapper.jar" "$@"
+
